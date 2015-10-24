@@ -1,5 +1,5 @@
 require_relative './minitest_helper'
-require "./lib/parsers/java7threaddumpparser.rb"
+require "parsers/java7threaddumpparser.rb"
 
 describe Java7ThreadDumpParser do
   

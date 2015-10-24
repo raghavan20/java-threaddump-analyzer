@@ -1,7 +1,7 @@
 require_relative '../minitest_helper'
-require './lib/annotators/uniquethreadsannotator.rb'
-require './lib/thread.rb'
-require './lib/threaddump.rb'
+require 'annotators/uniquethreadsannotator.rb'
+require 'thread.rb'
+require 'threaddump.rb'
 
 describe UniqueThreadsAnnotator do
   before do

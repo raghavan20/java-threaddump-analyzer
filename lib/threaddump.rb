@@ -1,4 +1,4 @@
-require './lib/thread.rb'
+require 'thread.rb'
 
 class ThreadDump
   include Enumerable

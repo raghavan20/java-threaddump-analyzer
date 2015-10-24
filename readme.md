@@ -41,7 +41,11 @@ $ jta.rb -f /tmp/thread.dump -t 100,200
  - groups thread by unique thread stack
 ```sh
 $ jta.rb -f /tmp/thread.dump -a
-``` 
+```
+ - run application locally (not from the gem) 
+```sh
+$ ruby -Ilib bin/jta.rb -f /tmp/thread.dump -l
+```
  
 ## Running tests
  - rake test

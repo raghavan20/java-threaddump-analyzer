@@ -1,6 +1,6 @@
 require_relative '../minitest_helper'
-require './lib/annotators/threadstacksizeannotator.rb'
-require "./lib/parsers/java7threaddumpparser.rb"
+require 'annotators/threadstacksizeannotator.rb'
+require "parsers/java7threaddumpparser.rb"
 
 describe ThreadStackSizeAnnotator do
   before do

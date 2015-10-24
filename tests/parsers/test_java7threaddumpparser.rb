@@ -1,6 +1,6 @@
 require 'minitest/spec'
 require 'minitest/autorun'
-require "./lib/parsers/java7threaddumpparser.rb"
+require "parsers/java7threaddumpparser.rb"
 
 describe ThreadDump do
   it "should list all threads in the file" do

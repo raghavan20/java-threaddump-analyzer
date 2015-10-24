@@ -1,15 +1,13 @@
 #!/usr/bin/ruby
 
 require 'optparse'
-require './lib/parsers/parsers.rb'
-require './lib/parsers/java7threaddumpparser.rb'
-require './lib/annotators/threadstacksizeannotator.rb'
-require './lib/annotators/uniquethreadsannotator.rb'
+require 'parsers/parsers.rb'
+require 'parsers/java7threaddumpparser.rb'
+require 'annotators/threadstacksizeannotator.rb'
+require 'annotators/uniquethreadsannotator.rb'
 
 
 options = {}
-argv = ARGV # copy args
-
 OptionParser.new { |opts|
   opts.banner = "Usage: java threaddump analyzer [options]"
   opts.on("-f", "--file threadump", "threaddump file") { |v| options[:file] = v }
@@ -24,8 +22,6 @@ OptionParser.new { |opts|
    
   opts.on_tail("-h", "--help") { puts opts; exit}
 }.parse!
-#p options
-
 
 if options.include? :parsers
   puts Parsers.list

@@ -1,6 +1,6 @@
-require './lib/thread.rb'
-require './lib/parsers/parsers.rb'
-require './lib/threaddump.rb'
+require 'parsers/parsers.rb'
+require 'j_thread'
+require 'threaddump.rb'
 
 class Java7ThreadDumpParser
   Parsers.register self

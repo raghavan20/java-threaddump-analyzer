@@ -1,5 +1,6 @@
 require_relative './minitest_helper'
-require './lib/thread.rb'
+require 'minitest/autorun'
+require 'j_thread'
 
 describe JThread do
   it "should compare using id" do
