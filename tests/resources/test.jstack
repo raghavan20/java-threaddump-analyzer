@@ -1,0 +1,188 @@
+Deadlock Detection:
+
+No deadlocks found.
+
+Thread 25995: (state = BLOCKED)
+ - sun.misc.Unsafe.park(boolean, long) @bci=0 (Compiled frame; information may be imprecise)
+ - java.util.concurrent.locks.LockSupport.park(java.lang.Object) @bci=14, line=186 (Compiled frame)
+ - java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(java.util.concurrent.SynchronousQueue$TransferStack$SNode, boolean, long) @bci=158, line=458 (Compiled frame)
+ - java.util.concurrent.SynchronousQueue$TransferStack.transfer(java.lang.Object, boolean, long) @bci=102, line=359 (Compiled frame)
+ - java.util.concurrent.SynchronousQueue.take() @bci=7, line=925 (Compiled frame)
+ - java.util.concurrent.ThreadPoolExecutor.getTask() @bci=156, line=1068 (Compiled frame)
+ - java.util.concurrent.ThreadPoolExecutor.runWorker(java.util.concurrent.ThreadPoolExecutor$Worker) @bci=26, line=1130 (Compiled frame)
+ - java.util.concurrent.ThreadPoolExecutor$Worker.run() @bci=19, line=615 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=722 (Interpreted frame)
+
+
+Thread 25988: (state = IN_NATIVE)
+ - java.net.SocketInputStream.socketRead0(java.io.FileDescriptor, byte[], int, int, int) @bci=0 (Compiled frame; information may be imprecise)
+ - java.net.SocketInputStream.read(byte[], int, int, int) @bci=79, line=150 (Compiled frame)
+ - java.net.SocketInputStream.read(byte[], int, int) @bci=11, line=121 (Compiled frame)
+ - java.io.BufferedInputStream.read1(byte[], int, int) @bci=39, line=273 (Compiled frame)
+ - java.io.BufferedInputStream.read(byte[], int, int) @bci=49, line=334 (Compiled frame)
+ - java.io.FilterInputStream.read(byte[], int, int) @bci=7, line=133 (Compiled frame)
+ - net.scansafe.net.server.InstrumentedInputStream.read(byte[], int, int) @bci=4, line=38 (Compiled frame)
+ - org.apache.commons.io.input.ProxyInputStream.read(byte[], int, int) @bci=12, line=98 (Compiled frame)
+ - org.apache.commons.io.input.TeeInputStream.read(byte[], int, int) @bci=4, line=127 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.util.BoundedInputStream.read(byte[], int, int) @bci=45, line=77 (Compiled frame)
+ - com.google.common.io.CountingInputStream.read(byte[], int, int) @bci=7, line=60 (Compiled frame)
+ - java.security.DigestInputStream.read(byte[], int, int) @bci=7, line=161 (Compiled frame)
+ - java.security.DigestInputStream.read(byte[], int, int) @bci=7, line=161 (Compiled frame)
+ - net.scansafe.commons.io.MultiDigestInputStream.read(byte[], int, int) @bci=7, line=67 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.piper.PiperHelper.doSimplePiping(net.scansafe.net.server.services.proxy.ProxyServiceConnection, java.io.InputStream, java.io.OutputStream, byte[], boolean, long, boolean) @bci=73, line=65 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.piper.TricklePiper.performEndTransfer() @bci=32, line=63 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.piper.AbstractDiskPiper.transferEnd() @bci=18, line=110 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.NonSslHttpStreamHandler.transferDownloadedData(net.scansafe.net.server.services.proxy.ProxyServiceConnection) @bci=107, line=267 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.NonSslHttpStreamHandler.handle(net.scansafe.net.server.services.proxy.ProxyServiceConnection) @bci=188, line=111 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.HttpStreamHandler.processStream() @bci=95, line=52 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.BaseStreamHandler.call() @bci=1, line=22 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.ProxyService.processNonConnectRequest(net.scansafe.net.server.services.proxy.Session, net.scansafe.net.server.services.proxy.ProxyServiceConnection) @bci=18, line=203 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.ProxyService.processOneHttpRequest(net.scansafe.net.server.services.proxy.Session, net.scansafe.net.proto.icap.HttpMessage, int) @bci=98, line=169 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.ProxyService.processHttpRequests(net.scansafe.net.server.services.proxy.Session) @bci=73, line=147 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.ProxyService.service(net.scansafe.net.server.SocketConnection) @bci=50, line=120 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.ProxyService$$FastClassByCGLIB$$379691f0.invoke(int, java.lang.Object, java.lang.Object[]) @bci=302 (Compiled frame)
+ - net.sf.cglib.proxy.MethodProxy.invoke(java.lang.Object, java.lang.Object[]) @bci=10, line=149 (Compiled frame)
+ - org.springframework.aop.framework.Cglib2AopProxy$CglibMethodInvocation.invokeJoinpoint() @bci=24, line=689 (Compiled frame)
+ - org.springframework.aop.framework.ReflectiveMethodInvocation.proceed() @bci=19, line=150 (Compiled frame)
+ - org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed() @bci=9, line=80 (Compiled frame)
+ - com.scansafe.mps.metrics.ConnectionMetricAspect.applyAdvice(org.aspectj.lang.ProceedingJoinPoint) @bci=9, line=49 (Compiled frame)
+ - sun.reflect.GeneratedMethodAccessor31.invoke(java.lang.Object, java.lang.Object[]) @bci=40 (Compiled frame)
+ - sun.reflect.DelegatingMethodAccessorImpl.invoke(java.lang.Object, java.lang.Object[]) @bci=6, line=43 (Compiled frame)
+ - java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) @bci=57, line=601 (Compiled frame)
+ - org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(java.lang.Object[]) @bci=39, line=621 (Compiled frame)
+ - org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(org.aspectj.lang.JoinPoint, org.aspectj.weaver.tools.JoinPointMatch, java.lang.Object, java.lang.Throwable) @bci=10, line=610 (Compiled frame)
+ - org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(org.aopalliance.intercept.MethodInvocation) @bci=55, line=65 (Compiled frame)
+ - org.springframework.aop.framework.ReflectiveMethodInvocation.proceed() @bci=101, line=172 (Compiled frame)
+ - org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(org.aopalliance.intercept.MethodInvocation) @bci=18, line=90 (Compiled frame)
+ - org.springframework.aop.framework.ReflectiveMethodInvocation.proceed() @bci=101, line=172 (Compiled frame)
+ - org.springframework.aop.framework.Cglib2AopProxy$DynamicAdvisedInterceptor.intercept(java.lang.Object, java.lang.reflect.Method, java.lang.Object[], net.sf.cglib.proxy.MethodProxy) @bci=112, line=622 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.ProxyService$$EnhancerByCGLIB$$4549ce22.service(net.scansafe.net.server.SocketConnection) @bci=49 (Compiled frame)
+ - net.scansafe.net.server.SocketProcessTask.run() @bci=70, line=58 (Compiled frame)
+ - java.util.concurrent.ThreadPoolExecutor.runWorker(java.util.concurrent.ThreadPoolExecutor$Worker) @bci=95, line=1145 (Compiled frame)
+ - java.util.concurrent.ThreadPoolExecutor$Worker.run() @bci=19, line=615 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=722 (Interpreted frame)
+
+
+
+Thread 25964: (state = IN_JAVA)
+ - sun.security.provider.SHA2.implCompress(byte[], int) @bci=6, line=205 (Compiled frame; information may be imprecise)
+ - sun.security.provider.DigestBase.engineUpdate(byte[], int, int) @bci=147, line=139 (Compiled frame)
+ - java.security.MessageDigest$Delegate.engineUpdate(byte[], int, int) @bci=7, line=568 (Compiled frame)
+ - java.security.MessageDigest.update(byte[], int, int) @bci=36, line=313 (Compiled frame)
+ - java.security.DigestInputStream.read(byte[], int, int) @bci=33, line=163 (Compiled frame)
+ - net.scansafe.commons.io.MultiDigestInputStream.read(byte[], int, int) @bci=7, line=67 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.piper.PiperHelper.doSimplePiping(net.scansafe.net.server.services.proxy.ProxyServiceConnection, java.io.InputStream, java.io.OutputStream, byte[], boolean, long, boolean) @bci=73, line=65 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.piper.AbstractDiskPiper.transferStart() @bci=156, line=85 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.NonSslHttpStreamHandler.transferDownloadedData(net.scansafe.net.server.services.proxy.ProxyServiceConnection) @bci=47, line=255 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.NonSslHttpStreamHandler.handle(net.scansafe.net.server.services.proxy.ProxyServiceConnection) @bci=188, line=111 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.HttpStreamHandler.processStream() @bci=95, line=52 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.BaseStreamHandler.call() @bci=1, line=22 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.ProxyService.processNonConnectRequest(net.scansafe.net.server.services.proxy.Session, net.scansafe.net.server.services.proxy.ProxyServiceConnection) @bci=18, line=203 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.ProxyService.processOneHttpRequest(net.scansafe.net.server.services.proxy.Session, net.scansafe.net.proto.icap.HttpMessage, int) @bci=98, line=169 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.ProxyService.processHttpRequests(net.scansafe.net.server.services.proxy.Session) @bci=73, line=147 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.ProxyService.service(net.scansafe.net.server.SocketConnection) @bci=50, line=120 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.ProxyService$$FastClassByCGLIB$$379691f0.invoke(int, java.lang.Object, java.lang.Object[]) @bci=302 (Compiled frame)
+ - net.sf.cglib.proxy.MethodProxy.invoke(java.lang.Object, java.lang.Object[]) @bci=10, line=149 (Compiled frame)
+ - org.springframework.aop.framework.Cglib2AopProxy$CglibMethodInvocation.invokeJoinpoint() @bci=24, line=689 (Compiled frame)
+ - org.springframework.aop.framework.ReflectiveMethodInvocation.proceed() @bci=19, line=150 (Compiled frame)
+ - org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed() @bci=9, line=80 (Compiled frame)
+ - com.scansafe.mps.metrics.ConnectionMetricAspect.applyAdvice(org.aspectj.lang.ProceedingJoinPoint) @bci=9, line=49 (Compiled frame)
+ - sun.reflect.GeneratedMethodAccessor31.invoke(java.lang.Object, java.lang.Object[]) @bci=40 (Compiled frame)
+ - sun.reflect.DelegatingMethodAccessorImpl.invoke(java.lang.Object, java.lang.Object[]) @bci=6, line=43 (Compiled frame)
+ - java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) @bci=57, line=601 (Compiled frame)
+ - org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(java.lang.Object[]) @bci=39, line=621 (Compiled frame)
+ - org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(org.aspectj.lang.JoinPoint, org.aspectj.weaver.tools.JoinPointMatch, java.lang.Object, java.lang.Throwable) @bci=10, line=610 (Compiled frame)
+ - org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(org.aopalliance.intercept.MethodInvocation) @bci=55, line=65 (Compiled frame)
+ - org.springframework.aop.framework.ReflectiveMethodInvocation.proceed() @bci=101, line=172 (Compiled frame)
+ - org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(org.aopalliance.intercept.MethodInvocation) @bci=18, line=90 (Compiled frame)
+ - org.springframework.aop.framework.ReflectiveMethodInvocation.proceed() @bci=101, line=172 (Compiled frame)
+ - org.springframework.aop.framework.Cglib2AopProxy$DynamicAdvisedInterceptor.intercept(java.lang.Object, java.lang.reflect.Method, java.lang.Object[], net.sf.cglib.proxy.MethodProxy) @bci=112, line=622 (Compiled frame)
+ - net.scansafe.net.server.services.proxy.ProxyService$$EnhancerByCGLIB$$4549ce22.service(net.scansafe.net.server.SocketConnection) @bci=49 (Compiled frame)
+ - net.scansafe.net.server.SocketProcessTask.run() @bci=70, line=58 (Compiled frame)
+ - java.util.concurrent.ThreadPoolExecutor.runWorker(java.util.concurrent.ThreadPoolExecutor$Worker) @bci=95, line=1145 (Compiled frame)
+ - java.util.concurrent.ThreadPoolExecutor$Worker.run() @bci=19, line=615 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=722 (Interpreted frame)
+
+
+Thread 25961: (state = BLOCKED)
+ - sun.misc.Unsafe.park(boolean, long) @bci=0 (Compiled frame; information may be imprecise)
+ - java.util.concurrent.locks.LockSupport.park(java.lang.Object) @bci=14, line=186 (Compiled frame)
+ - java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(java.util.concurrent.SynchronousQueue$TransferStack$SNode, boolean, long) @bci=158, line=458 (Compiled frame)
+ - java.util.concurrent.SynchronousQueue$TransferStack.transfer(java.lang.Object, boolean, long) @bci=102, line=359 (Compiled frame)
+ - java.util.concurrent.SynchronousQueue.take() @bci=7, line=925 (Compiled frame)
+ - java.util.concurrent.ThreadPoolExecutor.getTask() @bci=156, line=1068 (Compiled frame)
+ - java.util.concurrent.ThreadPoolExecutor.runWorker(java.util.concurrent.ThreadPoolExecutor$Worker) @bci=26, line=1130 (Compiled frame)
+ - java.util.concurrent.ThreadPoolExecutor$Worker.run() @bci=19, line=615 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=722 (Interpreted frame)
+
+
+Thread 9931: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.Object.wait() @bci=2, line=503 (Interpreted frame)
+ - org.snmp4j.util.ThreadPool$TaskManager.run() @bci=66, line=246 (Interpreted frame)
+
+
+Thread 9930: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.Object.wait() @bci=2, line=503 (Interpreted frame)
+ - java.util.TimerThread.mainLoop() @bci=28, line=526 (Interpreted frame)
+ - java.util.TimerThread.run() @bci=1, line=505 (Interpreted frame)
+
+
+
+Thread 9819: (state = BLOCKED)
+ - java.lang.Thread.sleep(long) @bci=0 (Interpreted frame)
+ - com.singularity.util.org.apache.log4j.helpers.FileWatchdog.run() @bci=11, line=104 (Interpreted frame)
+
+
+Thread 9818: (state = BLOCKED)
+ - sun.misc.Unsafe.park(boolean, long) @bci=0 (Compiled frame; information may be imprecise)
+ - java.util.concurrent.locks.LockSupport.parkNanos(java.lang.Object, long) @bci=20, line=226 (Compiled frame)
+ - java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(long) @bci=68, line=2082 (Compiled frame)
+ - java.util.concurrent.DelayQueue.take() @bci=132, line=220 (Compiled frame)
+ - com.singularity.ee.util.javaspecific.scheduler.t.c() @bci=106, line=716 (Compiled frame)
+ - com.singularity.ee.util.javaspecific.scheduler.t.take() @bci=1, line=672 (Compiled frame)
+ - com.singularity.ee.util.javaspecific.scheduler.u.a() @bci=51, line=500 (Compiled frame)
+ - com.singularity.ee.util.javaspecific.scheduler.i.run() @bci=18, line=725 (Compiled frame)
+ - java.lang.Thread.run() @bci=11, line=722 (Interpreted frame)
+
+
+Thread 9817: (state = BLOCKED)
+ - sun.misc.Unsafe.park(boolean, long) @bci=0 (Compiled frame; information may be imprecise)
+ - java.util.concurrent.locks.LockSupport.park(java.lang.Object) @bci=14, line=186 (Compiled frame)
+ - java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await() @bci=42, line=2043 (Compiled frame)
+ - java.util.concurrent.DelayQueue.take() @bci=108, line=215 (Compiled frame)
+ - com.singularity.ee.util.javaspecific.scheduler.t.c() @bci=106, line=716 (Compiled frame)
+ - com.singularity.ee.util.javaspecific.scheduler.t.take() @bci=1, line=672 (Compiled frame)
+ - com.singularity.ee.util.javaspecific.scheduler.u.a() @bci=51, line=500 (Compiled frame)
+ - com.singularity.ee.util.javaspecific.scheduler.i.run() @bci=18, line=725 (Compiled frame)
+ - java.lang.Thread.run() @bci=11, line=722 (Interpreted frame)
+
+
+Thread 9815: (state = BLOCKED)
+ - java.lang.Thread.sleep(long) @bci=0 (Interpreted frame)
+ - com.singularity.util.org.apache.log4j.helpers.FileWatchdog.run() @bci=11, line=104 (Interpreted frame)
+
+
+Thread 9813: (state = BLOCKED)
+
+
+Thread 9812: (state = BLOCKED)
+
+
+Thread 9811: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.ref.ReferenceQueue.remove(long) @bci=44, line=135 (Compiled frame)
+ - java.lang.ref.ReferenceQueue.remove() @bci=2, line=151 (Compiled frame)
+ - java.lang.ref.Finalizer$FinalizerThread.run() @bci=16, line=189 (Compiled frame)
+
+
+Thread 9810: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.Object.wait() @bci=2, line=503 (Compiled frame)
+ - java.lang.ref.Reference$ReferenceHandler.run() @bci=46, line=133 (Compiled frame)
+
+
+Thread 9797: (state = IN_NATIVE)
+
+

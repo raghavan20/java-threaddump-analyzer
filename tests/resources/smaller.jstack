@@ -1,0 +1,36 @@
+Deadlock Detection:
+
+No deadlocks found.
+
+Thread 25995: (state = BLOCKED)
+ - sun.misc.Unsafe.park(boolean, long) @bci=0 (Compiled frame; information may be imprecise)
+ - java.util.concurrent.locks.LockSupport.park(java.lang.Object) @bci=14, line=186 (Compiled frame)
+ - java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(java.util.concurrent.SynchronousQueue$TransferStack$SNode, boolean, long) @bci=158, line=458 (Compiled frame)
+ - java.util.concurrent.SynchronousQueue$TransferStack.transfer(java.lang.Object, boolean, long) @bci=102, line=359 (Compiled frame)
+ - java.util.concurrent.SynchronousQueue.take() @bci=7, line=925 (Compiled frame)
+ - java.util.concurrent.ThreadPoolExecutor.getTask() @bci=156, line=1068 (Compiled frame)
+ - java.util.concurrent.ThreadPoolExecutor.runWorker(java.util.concurrent.ThreadPoolExecutor$Worker) @bci=26, line=1130 (Compiled frame)
+ - java.util.concurrent.ThreadPoolExecutor$Worker.run() @bci=19, line=615 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=722 (Interpreted frame)
+
+Thread 9811: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.ref.ReferenceQueue.remove(long) @bci=44, line=135 (Compiled frame)
+ - java.lang.ref.ReferenceQueue.remove() @bci=2, line=151 (Compiled frame)
+ - java.lang.ref.Finalizer$FinalizerThread.run() @bci=16, line=189 (Compiled frame)
+
+Thread 9812: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.ref.ReferenceQueue.remove(long) @bci=44, line=135 (Compiled frame)
+ - java.lang.ref.ReferenceQueue.remove() @bci=2, line=151 (Compiled frame)
+ - java.lang.ref.Finalizer$FinalizerThread.run() @bci=16, line=189 (Compiled frame)
+
+Thread 9810: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.Object.wait() @bci=2, line=503 (Compiled frame)
+ - java.lang.ref.Reference$ReferenceHandler.run() @bci=46, line=133 (Compiled frame)
+
+
+Thread 9797: (state = IN_NATIVE)
+
+

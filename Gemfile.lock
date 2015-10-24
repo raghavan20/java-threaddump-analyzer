@@ -1,0 +1,28 @@
+PATH
+  remote: .
+  specs:
+    java-threaddump-analyzer (1.0.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ansi (1.5.0)
+    builder (3.2.2)
+    minitest (5.8.1)
+    minitest-reporters (1.1.4)
+      ansi
+      builder
+      minitest (>= 5.0)
+      ruby-progressbar
+    ruby-progressbar (1.7.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  java-threaddump-analyzer!
+  minitest
+  minitest-reporters
+
+BUNDLED WITH
+   1.10.6
